@@ -89,10 +89,12 @@ export class AzureADAuthService {
         }
     }
 // #enddocregion ctor
+
+    // private error(err: any) {
+    //     console.error(JSON.stringify(err, null, 4));
+    // }
+
 }
 
-function error(err: any) {
-    console.error(JSON.stringify(err, null, 4));
-}
 
 // #enddocregion
