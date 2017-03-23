@@ -1,20 +1,27 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardComponentComponent } from './dashboard-component.component';
+import { DashboardComponent } from './dashboard.component';
+import { HttpModule } from '@angular/http';
+import { RouterTestingModule } from '@angular/router/testing';
 
-describe('DashboardComponentComponent', () => {
-  let component: DashboardComponentComponent;
-  let fixture: ComponentFixture<DashboardComponentComponent>;
+import { HeroSearchComponent } from '../hero-search/hero-search.component';
+import { HeroService } from '../hero.service';
+
+describe('DashboardComponent', () => {
+  let component: DashboardComponent;
+  let fixture: ComponentFixture<DashboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponentComponent ]
+      imports: [ HttpModule, RouterTestingModule ],
+      declarations: [ DashboardComponent, HeroSearchComponent ],
+      providers: [ HeroService ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponentComponent);
+    fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

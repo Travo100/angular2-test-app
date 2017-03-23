@@ -16,18 +16,6 @@ import { HeroService } from './hero.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { StatusComponent } from './status/status.component';
-
-import { AzureADServiceConstants } from './ngAuth/authenticators/AzureADServiceConstants';
-import { AzureADAuthService } from './ngAuth/authenticators/AzureADAuthService';
-import { AuthenticatedHttpService } from './ngAuth/AuthenticatedHttpService';
-
-import { serviceConstants } from './authsettings.config';
-
-let authenticator = new AzureADAuthService(serviceConstants);
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -42,16 +30,9 @@ let authenticator = new AzureADAuthService(serviceConstants);
     HeroesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    HomeComponent,
-    LoginComponent,
-    StatusComponent
   ],
   providers: [
-    HeroService,
-    AuthenticatedHttpService, {
-      provide: AzureADAuthService,
-      useValue: authenticator
-    }
+    HeroService
   ],
   bootstrap: [ AppComponent ]
 })

@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 
 export class HeroesComponent implements OnInit {
-  title = 'Hall of Heros';
+  title = 'Hall of Heroes';
   selectedHero: Hero;
   heroes: Hero[];
 
