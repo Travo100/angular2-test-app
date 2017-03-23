@@ -29,7 +29,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    HeroSearchComponent,
+    HeroSearchComponent
   ],
   providers: [
     HeroService
